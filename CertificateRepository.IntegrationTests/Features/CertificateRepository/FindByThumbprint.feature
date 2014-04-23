@@ -1,6 +1,8 @@
 ﻿Feature: Certificate Repository Find By Thumbprint
 	Must throw exception when a thumbprint starts or ends with a left-to-right-mark (U+200E)
 	Must throw exception when a thumbprint starts or ends wtih a space
+	Must throw exception when a thumbprint contains an invalid character
+	Must throw exception when a thumbprint is of the wrong length
 
   @CleanupCertificatesOnError
   Scenario: Throw exeption when thumbprint starts with a left-to-right-mark

@@ -32,8 +32,10 @@ namespace CertificateRepository.IntegrationTests.Features.CertificateRepository
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Certificate Repository Find By Thumbprint", "Must throw exception when a thumbprint starts or ends with a left-to-right-mark (" +
-                    "U+200E)\nMust throw exception when a thumbprint starts or ends wtih a space", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Certificate Repository Find By Thumbprint", @"Must throw exception when a thumbprint starts or ends with a left-to-right-mark (U+200E)
+Must throw exception when a thumbprint starts or ends wtih a space
+Must throw exception when a thumbprint contains an invalid character
+Must throw exception when a thumbprint is of the wrong length", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,32 +74,32 @@ namespace CertificateRepository.IntegrationTests.Features.CertificateRepository
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Throw exeption when thumbprint starts with a left-to-right-mark", new string[] {
                         "CleanupCertificatesOnError"});
-#line 6
-  this.ScenarioSetup(scenarioInfo);
-#line 7
-    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
-   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  this.ScenarioSetup(scenarioInfo);
 #line 9
- testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
-   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
-   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
+   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
    testRunner.And("I call FindByThumbprint with thumbprint \'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C" +
                     "\' prefixed with a \'left-to-right-mark\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
- testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 14
-   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
-   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 16
-   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
+   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
  testRunner.Then("any certificates should be cleaned up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -110,32 +112,32 @@ namespace CertificateRepository.IntegrationTests.Features.CertificateRepository
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Throw exeption when thumbprint ends with a left-to-right-mark", new string[] {
                         "CleanupCertificatesOnError"});
-#line 21
-  this.ScenarioSetup(scenarioInfo);
-#line 22
-    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
-   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  this.ScenarioSetup(scenarioInfo);
 #line 24
- testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 25
-   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
-   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 27
+   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
    testRunner.And("I call FindByThumbprint with thumbprint \'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C" +
                     "\' sufixed with a \'left-to-right-mark\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
- testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 29
-   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
-   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 31
-   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
-   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
+   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
  testRunner.Then("any certificates should be cleaned up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -148,32 +150,32 @@ namespace CertificateRepository.IntegrationTests.Features.CertificateRepository
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Throw exeption when thumbprint starts with a space", new string[] {
                         "CleanupCertificatesOnError"});
-#line 36
-  this.ScenarioSetup(scenarioInfo);
-#line 37
-    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 38
-   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  this.ScenarioSetup(scenarioInfo);
 #line 39
- testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 40
-   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
-   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 42
+   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 43
+   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
    testRunner.And("I call FindByThumbprint with thumbprint \'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C" +
                     "\' prefixed with a \'space\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
- testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 44
-   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 45
-   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 46
-   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
-   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
+   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 49
+   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
  testRunner.Then("any certificates should be cleaned up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -186,32 +188,32 @@ namespace CertificateRepository.IntegrationTests.Features.CertificateRepository
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Throw exeption when thumbprint ends with a space", new string[] {
                         "CleanupCertificatesOnError"});
-#line 51
-  this.ScenarioSetup(scenarioInfo);
-#line 52
-    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 53
-   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  this.ScenarioSetup(scenarioInfo);
 #line 54
- testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 55
-   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 56
-   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 57
+   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 59
    testRunner.And("I call FindByThumbprint with thumbprint \'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C" +
                     "\' sufixed with a \'space\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
- testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 59
-   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 60
-   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 61
-   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 62
-   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 63
+   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 64
+   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 65
  testRunner.Then("any certificates should be cleaned up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -233,31 +235,31 @@ namespace CertificateRepository.IntegrationTests.Features.CertificateRepository
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Throw exeption when thumbprint contains an invalid character", @__tags);
-#line 66
-  this.ScenarioSetup(scenarioInfo);
-#line 67
-    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 68
-   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  this.ScenarioSetup(scenarioInfo);
 #line 69
- testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 70
-   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 71
-   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 72
-   testRunner.And(string.Format("I call FindByThumbprint with thumbprint \'{0}\' from the following examples", thumbprint), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 73
- testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 74
-   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And(string.Format("I call FindByThumbprint with thumbprint \'{0}\' from the following examples", thumbprint), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
-   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 76
-   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 77
-   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 78
+   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 79
+   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 80
  testRunner.Then("any certificates should be cleaned up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -280,31 +282,31 @@ namespace CertificateRepository.IntegrationTests.Features.CertificateRepository
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Throw exeption when thumbprint is of an incorrect length", @__tags);
-#line 87
-  this.ScenarioSetup(scenarioInfo);
-#line 88
-    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 89
-   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  this.ScenarioSetup(scenarioInfo);
 #line 90
- testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("the certificate \'sampleCertificate.pfx\' has been loaded using password \'abc123\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 91
-   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("place it into the \'My\' store for the \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 92
-   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I create a certificate repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 93
-   testRunner.And(string.Format("I call FindByThumbprint with thumbprint \'{0}\' from the following examples", thumbprint), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("set the Store Name to \'My\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 94
- testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.And("set the Store Location to \'CurrentUser\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 95
-   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And(string.Format("I call FindByThumbprint with thumbprint \'{0}\' from the following examples", thumbprint), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 96
-   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then("an exception will be thrown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 97
-   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 98
-   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 99
+   testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 100
+   testRunner.And("inner exception number 1 will have a \'ParamName\' set to \'thumbprint\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 101
  testRunner.Then("any certificates should be cleaned up", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
