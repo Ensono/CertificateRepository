@@ -79,11 +79,11 @@
 	  And inner exception number 1 will have a 'ParamName' set to 'thumbprint'
 	Then any certificates should be cleaned up
 	Examples: 
-	| Thumbprint                                |
-	| EFFF7FD55F1F3 7B67CCE6F539071AD13A4BFA92C |
-	| EFFF7FD55F1F37B67CCE6F539071XAD13A4BFA92C |
-	| EFFF7FD55F1F37B67CCE6F539071'AD13A4BFA92C |
-	| EF-FF7FD55F1F37B67CCE6F539071AD13A4BFA92C |
+	| Thumbprint                               |
+	| EFFF7FD55F1F3 7B67CCE6F539071AD13A4BFA92 |
+	| EFFF7FD55F1F37B67CCE6F539071XAD13A4BFA92 |
+	| EFFF7FD55F1F37B67CCE6F539071'AD13A4BFA92 |
+	| EF-FF7FD55F1F37B67CCE6F539071AD13A4BFA92 |
 
   @CleanupCertificatesOnError
   Scenario Outline: Throw exeption when thumbprint is of an incorrect length
