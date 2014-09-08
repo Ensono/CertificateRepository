@@ -14,7 +14,7 @@
 	  And I call FindByThumbprint with thumbprint 'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C' prefixed with a 'left-to-right-mark'
 	Then an exception will be thrown 
 	  And it will be of type 'CompositeArgumentException'
-	  And it will have 2 inner exception
+	  And it will have 3 inner exception
 	  And inner exception number 1 will be of type 'ArgumentException'
 	  And inner exception number 1 will have a 'ParamName' set to 'thumbprint'
 	Then any certificates should be cleaned up
@@ -29,7 +29,7 @@
 	  And I call FindByThumbprint with thumbprint 'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C' sufixed with a 'left-to-right-mark'
 	Then an exception will be thrown 
 	  And it will be of type 'CompositeArgumentException'
-	  And it will have 2 inner exception
+	  And it will have 3 inner exception
 	  And inner exception number 1 will be of type 'ArgumentException'
 	  And inner exception number 1 will have a 'ParamName' set to 'thumbprint'
 	Then any certificates should be cleaned up
@@ -44,7 +44,7 @@
 	  And I call FindByThumbprint with thumbprint 'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C' prefixed with a 'space'
 	Then an exception will be thrown 
 	  And it will be of type 'CompositeArgumentException'
-	  And it will have 1 inner exception
+	  And it will have 2 inner exception
 	  And inner exception number 1 will be of type 'ArgumentException'
 	  And inner exception number 1 will have a 'ParamName' set to 'thumbprint'
 	Then any certificates should be cleaned up
@@ -59,7 +59,7 @@
 	  And I call FindByThumbprint with thumbprint 'EFFF7FD55F1F37B67CCE6F539071AD13A4BFA92C' sufixed with a 'space'
 	Then an exception will be thrown 
 	  And it will be of type 'CompositeArgumentException'
-	  And it will have 1 inner exception
+	  And it will have 2 inner exception
 	  And inner exception number 1 will be of type 'ArgumentException'
 	  And inner exception number 1 will have a 'ParamName' set to 'thumbprint'
 	Then any certificates should be cleaned up

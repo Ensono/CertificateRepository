@@ -94,7 +94,7 @@ Must throw exception when a thumbprint is of the wrong length", ProgrammingLangu
 #line 16
    testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 3 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 18
    testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
@@ -132,7 +132,7 @@ Must throw exception when a thumbprint is of the wrong length", ProgrammingLangu
 #line 31
    testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 32
-   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 3 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
    testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 34
@@ -170,7 +170,7 @@ Must throw exception when a thumbprint is of the wrong length", ProgrammingLangu
 #line 46
    testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
-   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
    testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
@@ -208,7 +208,7 @@ Must throw exception when a thumbprint is of the wrong length", ProgrammingLangu
 #line 61
    testRunner.And("it will be of type \'CompositeArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 62
-   testRunner.And("it will have 1 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+   testRunner.And("it will have 2 inner exception", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 63
    testRunner.And("inner exception number 1 will be of type \'ArgumentException\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 64
