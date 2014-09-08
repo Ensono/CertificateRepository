@@ -19,7 +19,7 @@
 	Then any certificates should be cleaned up
 
   @CleanupCertificatesOnError
-  Scenario: Throw exeption when subject name starts with a left-to-right-mark
+  Scenario: Throw exeption when subject name ends with a left-to-right-mark
     Given the certificate 'sampleCertificate.pfx' has been loaded using password 'abc123' 
 	  And place it into the 'My' store for the 'CurrentUser'
 	When I create a certificate repository

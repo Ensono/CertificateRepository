@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateRepository", "CertificateRepository\CertificateRepository.csproj", "{13A5AA99-0627-48F3-992C-44D2B6E7752D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateRepository.UnitTests", "CertificateRepository.UnitTests\CertificateRepository.UnitTests.csproj", "{21EF3C06-9DC0-41D9-A40A-4E20CA4CE5B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateRepository.IntegrationTests", "CertificateRepository.IntegrationTests\CertificateRepository.IntegrationTests.csproj", "{656DAC1A-1581-4FD8-AE73-9069B9BC0C02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{365D3429-8E34-49CB-8E74-2B8E18D6B2D9}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

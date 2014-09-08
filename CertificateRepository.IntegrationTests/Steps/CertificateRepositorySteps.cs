@@ -20,6 +20,11 @@ namespace CertificateRepository.IntegrationTests.Steps {
             Context.Repository.StoreLocation = ParseEnum<StoreLocation>(storeLocation);
         }
 
+        [When(@"I call FindBySubjectName with subject name '(.*)' suffixed with a '(.*)'")]
+        public void WhenICallFindBySubjectNameWithSubjectNameSuffixedWithA(string p0, string p1) {
+            ScenarioContext.Current.Pending();
+        }
+
         [When(@"I call FindBySubjectName with subject '(.*)'"), UsedImplicitly]
         public void WhenICallFindBySubjectNameWithSubject(string subject) {
             Context.Results = Context.Repository.FindBySubjectName(subject, validOnly: false);
