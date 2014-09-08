@@ -59,7 +59,7 @@ namespace CertificateRepository.IntegrationTests.Steps {
 
         [Then(@"there should be '(.*)' or more certificates in the collection"), UsedImplicitly]
         public void ThenThereShouldBeOrMoreCertificatesInTheCollection(int expectedCount) {
-            Context.Results.Count().ShouldBeGreaterThan(expectedCount);
+            Context.Results.Count().ShouldBeGreaterThanOrEqualTo(expectedCount);
         }
 
         [Then(@"one certificate retrieved should match the thumbprint '(.*)'"), UsedImplicitly]
