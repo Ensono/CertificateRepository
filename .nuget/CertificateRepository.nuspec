@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Certificate Repository</id>
+    <version>1.0.0</version>
+    <authors>Richard Slater</authors>
+    <owners>Amido Limited</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>
+    <projectUrl>http://www.amido.com/labs/certificate-repository</projectUrl>
+    <iconUrl>http://uploads.amido.co.uk/uploads/2014/09/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Provides a high level abstraction over the Windows Certificate store.</description>
+    <releaseNotes>Initial Release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>Certificate, X509, X.509</tags>
+  </metadata>
+</package>
