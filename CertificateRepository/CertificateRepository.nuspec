@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Certificate Repository</id>
-    <version>1.0.0</version>
+    <id>CertificateRepository</id>
+    <version>$version$</version>
     <authors>Richard Slater</authors>
     <owners>Amido Limited</owners>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>
