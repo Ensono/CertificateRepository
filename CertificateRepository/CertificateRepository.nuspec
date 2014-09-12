@@ -2,6 +2,7 @@
 <package >
   <metadata>
     <id>CertificateRepository</id>
+    <title>Amido Certificate Repository</title>
     <version>$version$</version>
     <authors>Richard Slater</authors>
     <owners>Amido Limited</owners>
@@ -9,9 +10,9 @@
     <projectUrl>http://www.amido.com/labs/certificate-repository</projectUrl>
     <iconUrl>http://uploads.amido.co.uk/uploads/2014/09/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Provides a high level abstraction over the Windows Certificate store.</description>
+    <description>A high level abstraction over the Windows Certificate store, providing a simplified access model and informative exceptions to aid developers working with X.509 Certificates and the Windows Certificate Store.</description>
     <releaseNotes>Initial Release.</releaseNotes>
-    <copyright>Copyright 2014</copyright>
-    <tags>Certificate, X509, X.509</tags>
+    <copyright>Copyright &copy;2014, Amido Limited</copyright>
+    <tags>certificate, x509, x.509, cryptography, encryption, security</tags>
   </metadata>
 </package>
