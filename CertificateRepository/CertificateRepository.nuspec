@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A high level abstraction over the Windows Certificate store, providing a simplified access model and informative exceptions to aid developers working with X.509 Certificates and the Windows Certificate Store.</description>
     <releaseNotes>Initial Release.</releaseNotes>
-    <copyright>Copyright &copy;2014, Amido Limited</copyright>
+    <copyright>Copyright 2014, Amido Limited</copyright>
     <tags>certificate, x509, x.509, cryptography, encryption, security</tags>
   </metadata>
 </package>
